@@ -10,8 +10,9 @@ public class Product{
     public Product() {
     }
 
-    public Product(long id, String description, String categories) {
+    public Product(long id, String productName, String description, String categories) {
         this.id = id;
+        this.productName = productName;
         this.description = description;
         this.categories =  categories;
     }
@@ -41,6 +42,13 @@ public class Product{
         return categories;
     }
 
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
+    public String getProductName()
+    {
+        return productName;
+    }
 
 }

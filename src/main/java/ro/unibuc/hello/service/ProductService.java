@@ -30,6 +30,17 @@ public class ProductService {
         productRepository.save(productEntity);
         return product;
     }
+ 
+    public Product getProduct(String title) {
+        ProductEntity entity = productRepository.findByTitle(title);
+        Product product = new Product(
+        );
+        product.setProductName(entity.productName);
+        product.setCategories(entity.categories);
+        product.setDescription(entity.description);
+        return product;
+
+    }
     
 
 }
