@@ -79,6 +79,20 @@ class ProductControllerTest {
     }
 
     @Test
+    void test_deleteProduct() throws Exception {
+        // Arrange
+        long id = "1L";
+
+        // Act
+        mockMvc.perform(delete("/product/" + id)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+        // Assert
+        verify(productService, times(1)).deleteProductById(id);
+    }
+
+    @Test
     void test_getProduct_cascadesException() {
         // Arrange
         String productName = "AirPods";
