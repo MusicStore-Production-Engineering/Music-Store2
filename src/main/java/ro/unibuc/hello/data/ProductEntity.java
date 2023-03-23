@@ -2,6 +2,9 @@ package ro.unibuc.hello.data;
 
 import org.springframework.data.annotation.Id;
 
+
+
+
 public class ProductEntity {
 
     @Id
@@ -13,8 +16,8 @@ public class ProductEntity {
 
     public ProductEntity() {}
 
-    public ProductEntity(String productName, String description, String categories) {
-        
+    public ProductEntity(String Id, String productName, String description, String categories) {
+        this.id = id;
         this.productName = productName;
         this.description = description;
         this.categories = categories;
