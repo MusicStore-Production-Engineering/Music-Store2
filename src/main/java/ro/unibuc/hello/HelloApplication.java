@@ -29,8 +29,10 @@ public class HelloApplication {
 		informationRepository.deleteAll();
 		informationRepository.save(new InformationEntity("Overview",
 				"This is an example of using a data storage engine running separately from our applications server"));
-		productRepository.save(new ProductEntity("title","Overview",
+		productRepository.save(new ProductEntity("id","title","Overview",
 		"This is an example of using a data storage engine running separately from our applications server"));
+		
+		
 	}
 
 }

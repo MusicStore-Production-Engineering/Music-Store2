@@ -12,6 +12,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductRepository extends MongoRepository<ProductEntity, String> {
 
-    ProductEntity findByTitle(String productName);
+    ProductEntity findAll(String productName);
     ProductEntity save(ProductEntity product);
+    
+    ProductEntity findByProductName(String productName);
+   // ProductEntity deleteById(String Id);
 }
