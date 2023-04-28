@@ -7,7 +7,7 @@ import ro.unibuc.hello.dto.Product;
 
 class ProductTest {
 
-   /* Product test = new Product("Ibanez abc123", "test description", "Guitar");
+    Product test = new Product("Ibanez abc123", "test description", "Guitar");
 
 
 
@@ -23,6 +23,6 @@ class ProductTest {
 
     @Test
     void test_categories(){
-        Assertions.assertEquals(1, test.getCategories());
-    }*/
+        Assertions.assertEquals("Guitar", test.getCategories());
+    }
 }
