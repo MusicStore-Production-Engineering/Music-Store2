@@ -8,6 +8,7 @@ import ro.unibuc.hello.data.ProductRepository;
 import ro.unibuc.hello.exception.EntityNotFoundException;
 import ro.unibuc.hello.dto.Product;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Component
@@ -16,20 +17,24 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+    public ProductService() { }
     private final AtomicLong counter = new AtomicLong();
 
     
-    public Product saveProduct(Product product)
+    public ProductEntity saveProduct(Product product)
     {
-        ProductEntity productEntity = new ProductEntity(
-        );
-        
-        productEntity.categories = product.getCategories();
-        productEntity.description = product.getDescription();
-        productEntity.name = product.getName();
+        ProductEntity productEntity = new ProductEntity();
+
+
+        productEntity.setName(product.getName());
+        productEntity.setDescription(product.getDescription());
+        productEntity.setCategories(product.getCategories());
 
         productRepository.save(productEntity);
-        return product;
+        return productEntity;
+    }
+    public List<ProductEntity> getAllProducts() {
+        return productRepository.findAll();
     }
     
 

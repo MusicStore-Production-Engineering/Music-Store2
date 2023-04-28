@@ -2,7 +2,6 @@ package ro.unibuc.hello.dto;
 
 public class Product{
 
-    private long id;
     private String name;
     private String description;
     private String categories;
@@ -10,21 +9,14 @@ public class Product{
     public Product() {
     }
 
-    public Product(long id, String name, String description, String categories) {
-        this.id = id;
+    public Product(String name, String description, String categories) {
+
         this.name = name;
         this.description = description;
         this.categories =  categories;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
-
-    public long getId() {
-        return id;
-    }
 
     public void setDescription(String description) {
         this.description = description;
