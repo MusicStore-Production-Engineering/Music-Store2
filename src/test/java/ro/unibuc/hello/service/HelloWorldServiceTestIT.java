@@ -9,7 +9,7 @@ import ro.unibuc.hello.data.InformationRepository;
 import ro.unibuc.hello.dto.Greeting;
 
 @SpringBootTest
-@Tag("IT")
+//@Tag("IT")
 class HelloWorldServiceTestIT {
 
     @Autowired

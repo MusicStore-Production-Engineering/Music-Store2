@@ -30,8 +30,8 @@ public class ProductService {
         productEntity.setDescription(product.getDescription());
         productEntity.setCategories(product.getCategories());
 
-        productRepository.save(productEntity);
-        return productEntity;
+        return productRepository.save(productEntity);
+
     }
     public List<ProductEntity> getAllProducts() {
         return productRepository.findAll();
