@@ -21,9 +21,9 @@ pipeline {
                     IMAGE_TAG = "${MAJOR_VERSION}.\$((${MINOR_VERSION} + 1)).${PATCH_VERSION}"
                 }
                 sh """\
-                        docker build -t vasiliumiruna/${IMAGE_NAME}:${IMAGE_VERSION} .
+                        docker build -t vasiliumiruna/${IMAGE_NAME}:${IMAGE_TAG} .
                         docker login docker.io -u vasiliumiruna -p ${DOCKER_PASSWORD}
-                        docker push vasiliumiruna/${IMAGE_NAME}:${IMAGE_VERSION}
+                        docker push vasiliumiruna/${IMAGE_NAME}:${IMAGE_TAG}
                    """.stripIndent()
             }
         }
