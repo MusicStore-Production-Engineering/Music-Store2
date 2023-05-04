@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_PASSWORD = credentials("docker_password")
         IMAGE_NAME = "musicstore"
-        GITHUB_TOKEN = credentials("github_token")
+        GITHUB_TOKEN = credentials("Production-Eng")
     }
 
     stages {
